@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements | Fidelity Bank</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/announcements.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="shared-header"></header>
+
+    <!-- MAIN CONTENT -->
+    <main class="page-base">
+        <div class="container">
+            <!-- Page Hero -->
+            <section class="page-hero">
+                <h1>Announcements</h1>
+                <p>Important updates, service notices, and news from Fidelity Bank.</p>
+            </section>
+
+            <!-- Filter Tabs -->
+            <div class="announcement-filters">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="service">Service Notices</button>
+                <button class="filter-tab" data-filter="maintenance">System Maintenance</button>
+                <button class="filter-tab" data-filter="product">New Products & Features</button>
+                <button class="filter-tab" data-filter="holiday">Holiday Notices</button>
+            </div>
+
+            <!-- Announcements List -->
+            <div class="announcements-list">
+
+                <!-- Featured / Urgent -->
+                <article class="announcement-card featured" data-category="service">
+                    <div class="announcement-badge urgent">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg> Important
+                    </div>
+                    <div class="announcement-date">September 19, 2026</div>
+                    <h3>Enhanced Security Measures — Protecting Your Transactions</h3>
+                    <p>We are upgrading our security systems to better protect your funds. You may notice additional verification steps for certain transactions. This is part of our commitment to keeping your account safe.</p>
+                    <a href="security-awareness.html" class="read-more">Learn more about staying secure →</a>
+                </article>
+
+                <!-- Maintenance -->
+                <article class="announcement-card" data-category="maintenance">
+                    <div class="announcement-badge maintenance">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg> Scheduled Maintenance
+                    </div>
+                    <div class="announcement-date">September 25–26, 2026</div>
+                    <h3>Internet Banking & Mobile App — Scheduled System Upgrade</h3>
+                    <p>We will be performing system maintenance to improve your digital banking experience. Services may be intermittently unavailable between <strong>11:00 PM Saturday</strong> and <strong>4:00 AM Sunday</strong>. Plan your transactions
+                        accordingly.
+                    </p>
+                </article>
+
+                <!-- New Product -->
+                <article class="announcement-card" data-category="product">
+                    <div class="announcement-badge new">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg> New Feature
+                    </div>
+                    <div class="announcement-date">September 10, 2026</div>
+                    <h3>Introducing Instant Loan Offers — Now in Your Mobile App</h3>
+                    <p>Eligible customers can now view and accept pre-approved loan offers directly from the dashboard of our mobile app. No paperwork, no branch visit — funds in minutes.</p>
+                    <a href="loans-advances.html" class="read-more">Explore Loan Options →</a>
+                </article>
+
+                <!-- Holiday Notice -->
+                <article class="announcement-card" data-category="holiday">
+                    <div class="announcement-badge holiday">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg> Holiday Notice
+                    </div>
+                    <div class="announcement-date">September 1, 2026</div>
+                    <h3>Public Holiday — Branch Operating Hours</h3>
+                    <p>Please be advised that our branches will be closed on public holidays. Digital banking services — Mobile App, Internet Banking, and *770# — remain fully available 24/7.</p>
+                </article>
+
+                <!-- Service Update -->
+                <article class="announcement-card" data-category="service">
+                    <div class="announcement-badge update">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="20 6 9 17 4 12"/>
+            </svg> Service Update
+                    </div>
+                    <div class="announcement-date">August 28, 2026</div>
+                    <h3>Inter-Bank Transfers — Faster Processing Times</h3>
+                    <p>We have upgraded our transfer infrastructure. Funds sent to other Nigerian banks now arrive within minutes, even during peak hours.</p>
+                </article>
+
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noAnnouncements" class="no-results" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+                <p>No announcements found in this category.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="shared-footer"></footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Load Header
+        fetch('components/header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('shared-header').innerHTML = html;
+            });
+        // Load Footer
+        fetch('components/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('shared-footer').innerHTML = html;
+            });
+    </script>
+    <script src="js/page-load.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/announcements.js"></script>
+</body>
+
+</html>

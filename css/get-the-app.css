@@ -1,0 +1,290 @@
+/* ==========================================
+   KILL THE GHOST DROPDOWNS — Instant Close Fix
+========================================== */
+
+
+/* 1. Remove ALL gaps between button and menu */
+
+.nav-dropdown .dropdown-menu {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+    top: 100% !important;
+    /* Touches the button EXACTLY */
+}
+
+
+/* 2. ONLY show menu when DIRECTLY hovering the dropdown */
+
+.nav-dropdown>.dropdown-menu {
+    display: none !important;
+}
+
+.nav-dropdown:hover>.dropdown-menu {
+    display: block !important;
+}
+
+
+/* 3. INSTANTLY hide ALL other menus when NOT hovering */
+
+.header-nav-expanded>li:not(:hover)>.dropdown-menu {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+
+/* 4. NO transition delay — instant close! */
+
+.dropdown-menu {
+    transition: none !important;
+    animation: none !important;
+}
+
+
+/* Side bar */
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 99999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    transform: translateX(0);
+}
+
+
+/* ✅ Same page load animation as open-account & login */
+
+html {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+html.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ✅ Force visibility (fixes blank page issue) */
+
+body {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+}
+
+.app-hero {
+    background-color: #00703c !important;
+    color: #ffffff !important;
+}
+
+* {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/* Hero Banner */
+
+.app-hero {
+    background-color: #00703c;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 24px;
+}
+
+.app-hero h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.app-hero p {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+
+/* Main Content Area */
+
+.app-page-content {
+    padding: 48px 24px;
+    background-color: #f8faf9;
+}
+
+
+/* Two-Column Grid */
+
+.app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+
+/* Features List */
+
+.app-features h2 {
+    color: #00703c;
+    font-size: 22px;
+    margin: 0 0 24px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    padding: 12px 0 12px 28px;
+    font-size: 15px;
+    color: #333;
+    border-bottom: 1px solid #e8e8e8;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00703c;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+/* Download Buttons Card */
+
+.download-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.download-section h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.download-section>p {
+    margin: 0 0 24px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* Shared Button Style */
+
+.app-button {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.app-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Google Play Button */
+
+.google-play {
+    background-color: #000000;
+}
+
+.google-play:hover {
+    background-color: #1a1a1a;
+}
+
+
+/* App Store Button */
+
+.app-store {
+    background-color: #00703c;
+}
+
+.app-store:hover {
+    background-color: #005a30;
+}
+
+
+/* Button Content */
+
+.app-icon {
+    height: 36px;
+    width: auto;
+}
+
+.app-button-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.app-button-label {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.app-button-store {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.version-note {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* ✅ Center Footer Badges (matches your footer.css) */
+
+.footer-badges {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+    margin: 24px 0 !important;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+}

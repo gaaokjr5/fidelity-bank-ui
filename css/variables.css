@@ -1,0 +1,21 @@
+:root {
+    /* Fidelity Brand Colors */
+    --fidelity-green: #00703C;
+    --fidelity-gold: #D4AF37;
+    --slate-dark: #1F2937;
+    --slate-light: #F3F4F6;
+    --white: #FFFFFF;
+    --text-dark: #111827;
+    --text-muted: #6B7280;
+    /* Typography */
+    --font-primary: 'Montserrat', 'Roboto', sans-serif;
+    --base-size: 16px;
+    --spacing: 8px;
+    /* Border Radius & Shadows */
+    --radius: 6px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    /* Transitions */
+    --transition: 0.25s ease;
+}

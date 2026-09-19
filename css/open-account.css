@@ -1,0 +1,76 @@
+/* ==========================================
+   OPEN ACCOUNT PAGE — Page-Specific Styling
+========================================== */
+
+
+/* Page Header Section */
+
+.page-header {
+    background: linear-gradient(135deg, #00703c 0%, #005a30 100%);
+    color: #ffffff;
+    padding: 48px 0 32px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #ffffff;
+}
+
+.page-header p {
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #e6e6e6;
+}
+
+
+/* Main Form Section */
+
+.account-section {
+    padding: 48px 0 72px;
+    background: #f8faf9;
+    min-height: calc(100vh - 300px);
+}
+
+.account-section .container {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Form Card — Wider than hero form */
+
+.application-card {
+    background: #ffffff;
+    padding: 36px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 520px;
+}
+
+.application-card .form-title {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 600px) {
+    .page-header {
+        padding: 32px 0 24px;
+    }
+    .page-header h1 {
+        font-size: 24px;
+    }
+    .account-section {
+        padding: 24px 0 48px;
+    }
+    .application-card {
+        padding: 24px 20px;
+    }
+}

@@ -1,0 +1,241 @@
+/* ==========================================
+   ANNOUNCEMENTS — Page Styles
+========================================== */
+
+
+/* ==========================================
+   PAGE LOAD ANIMATION — Global for ALL Pages
+========================================== */
+
+html {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+html.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Base page container — consistent padding across all pages */
+
+.page-base {
+    padding: 48px 24px 80px;
+    background-color: #f8faf9;
+    min-height: 100vh;
+}
+
+
+/* Page Hero */
+
+.page-hero {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+    border-bottom: 2px solid #e0e8e3;
+}
+
+.page-hero h1 {
+    color: #00703c;
+    font-size: 32px;
+    margin: 0 0 12px;
+}
+
+.page-hero p {
+    color: #555;
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Filter Tabs */
+
+.announcement-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.filter-tab {
+    padding: 10px 18px;
+    border: 2px solid #e0e8e3;
+    background: #ffffff;
+    color: #555;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-tab:hover {
+    border-color: #00703c;
+    color: #00703c;
+}
+
+.filter-tab.active {
+    background-color: #00703c;
+    border-color: #00703c;
+    color: #ffffff;
+}
+
+
+/* Announcements List */
+
+.announcements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.announcement-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 28px 32px;
+    border-left: 4px solid #00703c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+.announcement-card.featured {
+    border-left-width: 5px;
+    background: linear-gradient(to right, #f4f9f6, #ffffff);
+}
+
+.announcement-card.hidden {
+    display: none;
+}
+
+
+/* Badges */
+
+.announcement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.announcement-badge svg {
+    width: 14px;
+    height: 14px;
+}
+
+.urgent {
+    background: #fff2f2;
+    color: #d63031;
+}
+
+.maintenance {
+    background: #fff7e6;
+    color: #b88600;
+}
+
+.new {
+    background: #e6ffef;
+    color: #00703c;
+}
+
+.holiday {
+    background: #eaf4ff;
+    color: #005ea2;
+}
+
+.update {
+    background: #f0f0f0;
+    color: #444;
+}
+
+
+/* Date & Content */
+
+.announcement-date {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.announcement-card h3 {
+    color: #222;
+    font-size: 19px;
+    margin: 0 0 12px;
+    line-height: 1.4;
+}
+
+.announcement-card p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+
+.announcement-card strong {
+    color: #00703c;
+}
+
+.read-more {
+    color: #d4af37;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: #b88600;
+    text-decoration: underline;
+}
+
+
+/* No Results */
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+}
+
+.no-results svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    opacity: 0.4;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .page-hero h1 {
+        font-size: 26px;
+    }
+    .announcement-card {
+        padding: 22px 20px;
+    }
+    .announcement-card h3 {
+        font-size: 17px;
+    }
+    .filter-tab {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Cards — Fidelity Bank Nigeria</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- ✅ Shared CSS (Standard Order) -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- ✅ Page-Specific CSS -->
+    <link rel="stylesheet" href="css/rate-cards.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="shared-header"></header>
+
+    <!-- MAIN CONTENT -->
+    <main class="rates-page">
+        <div class="container">
+            <!-- Page Hero -->
+            <section class="page-hero">
+                <h1>Rate Cards & Pricing</h1>
+                <p>Transparent, competitive rates and fees for all our products and services — updated as at September 2026.</p>
+                <p class="disclaimer">Rates are subject to review without prior notice. Contact us for the most current pricing.</p>
+            </section>
+
+            <!-- Deposit Rates -->
+            <section class="rates-section">
+                <h2 class="section-heading">
+                    <img src="images/icons/icon-deposit.svg" alt="Deposit" width="32" height="32" class="section-icon"> Deposit & Savings Interest Rates
+                </h2>
+                <div class="rates-grid">
+                    <div class="rate-card">
+                        <h3>Savings Account</h3>
+                        <div class="rate-value">3.5<span>% p.a.</span></div>
+                        <p class="rate-desc">Tiered interest on daily balance</p>
+                        <ul class="rate-details">
+                            <li>Minimum balance: ₦1,000</li>
+                            <li>Credited quarterly</li>
+                            <li>Withdraw anytime</li>
+                        </ul>
+                    </div>
+
+                    <div class="rate-card featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <h3>High-Yield Savings</h3>
+                        <div class="rate-value">5.25<span>% p.a.</span></div>
+                        <p class="rate-desc">Higher returns with limited withdrawals</p>
+                        <ul class="rate-details">
+                            <li>Minimum balance: ₦50,000</li>
+                            <li>Max 3 withdrawals/month</li>
+                            <li>Compound interest option</li>
+                        </ul>
+                    </div>
+
+                    <div class="rate-card">
+                        <h3>Fixed Deposit</h3>
+                        <div class="rate-value">7.5 – 10.5<span>% p.a.</span></div>
+                        <p class="rate-desc">Based on tenor & amount</p>
+                        <ul class="rate-details">
+                            <li>Tenor: 30–365 days</li>
+                            <li>Minimum: ₦100,000</li>
+                            <li>Certificate issued</li>
+                        </ul>
+                    </div>
+
+                    <div class="rate-card">
+                        <h3>Call Deposit</h3>
+                        <div class="rate-value">4.5<span>% p.a.</span></div>
+                        <p class="rate-desc">Funds available on demand</p>
+                        <ul class="rate-details">
+                            <li>Minimum: ₦500,000</li>
+                            <li>Access with 24hr notice</li>
+                            <li>Business & Personal</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loan Rates -->
+            <section class="rates-section">
+                <h2 class="section-heading">
+                    <img src="images/icons/icon-loan-rate.svg" alt="Loan Rates" width="32" height="32" class="section-icon"> Loan & Advance Interest Rates
+                </h2>
+                <div class="rates-grid">
+                    <div class="rate-card">
+                        <h3>Personal Loan</h3>
+                        <div class="rate-value">18 – 24<span>% p.a.</span></div>
+                        <p class="rate-desc">Reducing balance basis</p>
+                        <ul class="rate-details">
+                            <li>Processing fee: Up to 2%</li>
+                            <li>Insurance: As applicable</li>
+                            <li>Repayment: Monthly direct debit</li>
+                        </ul>
+                    </div>
+
+                    <div class="rate-card">
+                        <h3>Salary Advance</h3>
+                        <div class="rate-value">1.1<span>% p.m.</span></div>
+                        <p class="rate-desc">Flat monthly rate</p>
+                        <ul class="rate-details">
+                            <li>Tenor: 1–12 months</li>
+                            <li>Processing fee: 1%</li>
+                            <li>Approval in minutes</li>
+                        </ul>
+                    </div>
+
+                    <div class="rate-card">
+                        <h3>SME & Business Loan</h3>
+                        <div class="rate-value">16 – 22<span>% p.a.</span></div>
+                        <p class="rate-desc">Tailored to business profile</p>
+                        <ul class="rate-details">
+                            <li>Collateral may be required</li>
+                            <li>Moratorium available</li>
+                            <li>Agri-support incentives apply</li>
+                        </ul>
+                    </div>
+
+                    <div class="rate-card">
+                        <h3>Asset Finance</h3>
+                        <div class="rate-value">17 – 21<span>% p.a.</span></div>
+                        <p class="rate-desc">Vehicles, equipment & machinery</p>
+                        <ul class="rate-details">
+                            <li>Equity contribution: 20–30%</li>
+                            <li>Asset serves as collateral</li>
+                            <li>Max tenor: 48 months</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fees & Charges -->
+            <section class="rates-section">
+                <h2 class="section-heading">
+                    <img src="images/icons/icon-fees.svg" alt="Fees" width="32" height="32" class="section-icon"> Fees & Service Charges
+                </h2>
+
+                <div class="table-wrapper">
+                    <table class="fees-table">
+                        <thead>
+                            <tr>
+                                <th>Service / Transaction</th>
+                                <th>Charge / Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Account Maintenance (Current)</td>
+                                <td>₦1/mille on turnover</td>
+                            </tr>
+                            <tr>
+                                <td>ATM Withdrawal — Fidelity</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>ATM Withdrawal — Other Banks</td>
+                                <td>₦35 per withdrawal</td>
+                            </tr>
+                            <tr>
+                                <td>Intra-Bank Transfer</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>Inter-Bank Transfer (NIP)</td>
+                                <td>₦10 – ₦50 depending on amount</td>
+                            </tr>
+                            <tr>
+                                <td>Card — Annual Maintenance</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>Card — Replacement</td>
+                                <td>₦1,500</td>
+                            </tr>
+                            <tr>
+                                <td>Dormancy Reactivation</td>
+                                <td>₦0 — Free</td>
+                            </tr>
+                            <tr>
+                                <td>Cheque Book Issuance</td>
+                                <td>₦500 per 25 leaves</td>
+                            </tr>
+                            <tr>
+                                <td>Stop Payment on Cheque</td>
+                                <td>₦2,500 per instruction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h2>Need a Custom Quote?</h2>
+                <p>For facility-specific pricing, discounted rates, or large transactions — speak with our team directly.</p>
+                <div class="cta-buttons">
+                    <a href="open-account.html" class="btn-primary-full">Open an Account</a>
+                    <a href="complaint-feedback.html" class="btn-secondary">Contact Business Desk</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="shared-footer"></footer>
+
+    <!-- ✅ Scripts — STANDARD ORDER WITH SIDEBAR -->
+    <script src="js/header.js"></script>
+    <script src="js/page-load.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/rate-cards.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidelity Bank | Digital Experience</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/resource-center.css">
+</head>
+
+<body>
+
+    <!-- HEADER — Loaded from components/header.html -->
+    <div id="header-placeholder"></div>
+
+    <!-- ==========================================
+  HERO SECTION — with Background Image
+========================================== -->
+    <!-- ==========================================
+  HERO SECTION — 4-SLIDE AUTO-ROTATING SLIDER
+========================================== -->
+    <section class="hero-slider">
+        <div class="slider-wrapper">
+
+            <!-- SLIDE 1 — Welcome / Main Value Prop -->
+            <div class="slide active" style="background-image: url('images/hero-slide-1.jpg');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Banking Made Simple, Secure & Accessible</h1>
+                        <p>Your trusted partner for financial growth. Seamless banking, loans, cards, and support — anywhere, anytime.</p>
+                        <div class="hero-buttons">
+                            <a href="open-account.html" class="btn btn-accent">Open an Account</a>
+                            <button class="btn btn-outline">Get Support</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 — Business Banking -->
+            <div class="slide" style="background-image: url('images/hero-slide-2.jpg');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Grow Your Business With Confidence</h1>
+                        <p>Corporate accounts, SME financing, and tailored solutions to power your growth across Nigeria.</p>
+                        <div class="hero-buttons">
+                            <a href="business-banking.html" class="btn-accent">Explore Business Banking</a>
+                            <button class="btn btn-outline">Speak to an Advisor</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3 — Digital / Mobile -->
+            <div class="slide" style="background-image: url('images/hero-slide-3.jpg');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Smart Banking in Minutes</h1>
+                        <p>Open accounts, apply for loans, and manage cards — all from your phone or computer. No queues, no paperwork.</p>
+                        <div class="hero-buttons">
+                            <a href="get-the-app.html" class="btn-accent">Get the App</a> <button class="btn btn-outline">See How It Works</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4 — Trust & Heritage -->
+            <div class="slide" style="background-image: url('images/hero-slide-4.jpg');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Your Trusted Partner Since 1988</h1>
+                        <p>Licensed by CBN • Insured by NDIC • 2.5M+ active customers. We keep our word.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-accent">Join Fidelity Today</button>
+                            <button class="btn btn-outline">Learn Our Story</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slider Navigation Arrows -->
+        <button class="slider-arrow prev-arrow" aria-label="Previous Slide">‹</button>
+        <button class="slider-arrow next-arrow" aria-label="Next Slide">›</button>
+
+        <!-- Slider Dot Indicators -->
+        <div class="slider-dots">
+            <button class="dot active" data-slide="0" aria-label="Go to Slide 1"></button>
+            <button class="dot" data-slide="1" aria-label="Go to Slide 2"></button>
+            <button class="dot" data-slide="2" aria-label="Go to Slide 3"></button>
+            <button class="dot" data-slide="3" aria-label="Go to Slide 4"></button>
+        </div>
+    </section>
+
+    <!-- ==========================================
+  QUICK ACTIONS SECTION — with Icons
+========================================== -->
+    <section class="actions-section">
+        <div class="container">
+            <h2 style="text-align:center;">Quick Actions</h2>
+            <div class="actions-grid">
+                <div class="card action-card" role="button" tabindex="0" aria-label="Cards & Payments">
+                    <img src="images/icons/icon-cards.svg" alt="" class="action-icon">
+                    <h3>Cards & Payments</h3>
+                    <p>Manage your cards, set limits, and make payments securely.</p>
+                </div>
+                <div class="card action-card" role="button" tabindex="0" aria-label="Loans & Advances">
+                    <img src="images/icons/icon-loans.svg" alt="" class="action-icon">
+                    <h3>Loans & Advances</h3>
+                    <p>Access quick loans, salary advances, and financing options.</p>
+                </div>
+                <div class="card action-card" role="button" tabindex="0" aria-label="Documents & Forms">
+                    <img src="images/icons/icon-docs.svg" alt="" class="action-icon">
+                    <h3>Documents & Forms</h3>
+                    <p>Download account statements, forms, and policy documents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+   RESOURCE CENTER — Featured on Homepage
+========================================== -->
+    <section class="home-resource-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resource Center</h2>
+                <p>Download helpful forms, guides, and documents</p>
+            </div>
+
+            <div class="resource-grid">
+                <!-- Card 1 -->
+                <a href="resource-center.html" class="resource-card">
+                    <div class="resource-card-image">
+                        <img src="images/resource-center/form-account.jpg" alt="Account Opening Form">
+                    </div>
+                    <div class="resource-card-content">
+                        <h3>Account Opening Form</h3>
+                        <p>PDF • 245KB</p>
+                        <span class="btn-accent small-btn">Download</span>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="resource-center.html" class="resource-card">
+                    <div class="resource-card-image">
+                        <img src="images/resource-center/guide-mobile.jpg" alt="Mobile Banking Guide">
+                    </div>
+                    <div class="resource-card-content">
+                        <h3>Mobile Banking Guide</h3>
+                        <p>PDF • 1.2MB</p>
+                        <span class="btn-accent small-btn">Download</span>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="resource-center.html" class="resource-card">
+                    <div class="resource-card-image">
+                        <img src="images/resource-center/policy-privacy.jpg" alt="Privacy Policy">
+                    </div>
+                    <div class="resource-card-content">
+                        <h3>Privacy Policy</h3>
+                        <p>PDF • 310KB</p>
+                        <span class="btn-accent small-btn">View</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="view-all-btn">
+                <a href="resource-center.html" class="btn-accent">View All Resources →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+  CONFIRMATION MODAL
+========================================== -->
+    <div class="modal-overlay" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal">
+            <h3 id="modalTitle">Confirm Submission</h3>
+            <p>Please verify your details before submitting your application.</p>
+            <div style="display:flex; gap:12px; margin-top:20px;">
+                <button class="btn btn-outline" id="modalCancel">Cancel</button>
+                <button class="btn btn-accent" id="modalConfirm">Confirm & Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER — Loaded from components/footer.html -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ==========================================
+  SCRIPTS — Keep existing ones!
+========================================== -->
+    <script src="js/page-load.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/hero-slider.js"></script>
+    <script src="js/load-components.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script type="module" src="js/progress.js"></script>
+    <script type="module" src="js/resources.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('multiStepForm');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            const modal = document.getElementById('confirmModal');
+            const modalCancel = document.getElementById('modalCancel');
+            const modalConfirm = document.getElementById('modalConfirm');
+            const reviewSummary = document.getElementById('reviewSummary');
+
+            const waitForWorkflow = setInterval(() => {
+                if (window.workflow) {
+                    clearInterval(waitForWorkflow);
+                    const wf = window.workflow;
+
+                    function updateButtons() {
+                        prevBtn.style.display = wf.currentStep > 0 ? 'inline-flex' : 'none';
+                        nextBtn.style.display = wf.currentStep < wf.totalSteps - 1 ? 'inline-flex' : 'none';
+                        submitBtn.style.display = wf.currentStep === wf.totalSteps - 1 ? 'inline-flex' : 'none';
+
+                        if (wf.currentStep === 2) {
+                            const data = Object.fromEntries(new FormData(form));
+                            reviewSummary.innerHTML = `
+            <p><strong>Name:</strong> ${wf.escapeHtml(data.fullname)}</p>
+            <p><strong>Email:</strong> ${wf.escapeHtml(data.email)}</p>
+            <p><strong>Phone:</strong> ${wf.escapeHtml(data.phone)}</p>
+            <p><strong>ID Type:</strong> ${data.idType?.toUpperCase()}</p>
+          `;
+                        }
+                    }
+
+                    const origRender = wf.renderStepVisibility.bind(wf);
+                    wf.renderStepVisibility = () => {
+                        origRender();
+                        updateButtons();
+                    };
+
+                    nextBtn.addEventListener('click', () => wf.nextStep());
+                    prevBtn.addEventListener('click', () => wf.prevStep());
+
+                    form.addEventListener('submit', e => {
+                        e.preventDefault();
+                        if (wf.validateCurrentStep()) {
+                            modal.classList.add('open');
+                            modal.setAttribute('aria-hidden', 'false');
+                        }
+                    });
+
+                    modalCancel.addEventListener('click', () => {
+                        modal.classList.remove('open');
+                        modal.setAttribute('aria-hidden', 'true');
+                    });
+                    modalConfirm.addEventListener('click', () => {
+                        alert('✅ Application submitted successfully!');
+                        wf.clearState();
+                        modal.classList.remove('open');
+                        modal.setAttribute('aria-hidden', 'true');
+                    });
+
+                    updateButtons();
+                }
+            }, 50);
+        });
+    </script>
+
+</body>
+
+</html>

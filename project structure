@@ -1,0 +1,119 @@
+fidelity-bank-ui/
+│
+├── favicon.ico 
+├── index.html                          ← UPDATED: Hero slider replaces static hero ✅
+├── open-account.html        🆕 NEW! ← Dedicated Account Opening Page
+├── login.html              🆕 NEW! ← Login Page
+├── get-the-app.html 
+├── business-banking.html
+├── privacy-policy.html
+├── terms-of-service.html
+├── resource-center.html
+├── cookie-policy.html
+├── complaint-feedback.html
+├── agric-export.html
+├── remittance.html
+├── card-services.html
+├── loans-advances.html
+├── branch-locator.html
+├── rate-cards.html
+├── internet-banking.html
+├── careers.html
+├── faq.html
+├── contact-us.html
+├── security-awareness.html
+|
+|
+├── components/
+│   ├── header.html                     ← UNCHANGED ✅
+│   └── footer.html                     ← UNCHANGED (PNG badges already) ✅
+│
+├── css/
+│   ├── variables.css
+│   ├── base.css
+│   ├── components.css
+|   ├── business-banking.css
+│   ├── layout.css
+|   ├── header.css
+|   ├── privacy-policy.css
+│   ├── responsive.css
+|   ├── terms-of-service.css
+|   ├── resource-center.css
+|   ├── cookie-policy.css
+|   ├── agric-export.css
+|   ├── remittance.css
+|   ├── complaint-feedback.css
+|   ├── card-services.css
+|   ├── loans-advances.css
+|   ├── branch-locator.css
+|   ├── rate-cards.css
+|   ├── internet-banking.css
+|   ├── careers.css
+|   ├── faq.css
+|   ├── security-awareness.css
+│   ├── hero-slider.css
+│   ├── open-account.css
+│   └── login.css           🆕 NEW! ← Login page styling
+|
+|
+├── js/
+│   ├── page-load.js        ✅ Page animations
+|   ├── hero-slider.js      ✅ Hero slides
+|   ├── sidebar.js
+|   ├── footer.js              🆕 ← FOOTER SCRIPTS HERE
+|   ├── load-components.js   ✅ Header + Footer
+|   ├── progress.js          ✅ Form wizard
+|   ├── business-banking.js
+|   ├── privacy-policy.js
+|   ├── terms-of-service.js
+|   ├── cookie-policy.js
+|   ├── complaint-feedback.js
+|   ├── agric-export.js
+|   ├── remittance.js
+|   ├── card-services.js
+|   ├── loans-advances.js
+|   ├── branch-locator.js
+|   ├── rate-cards.js
+|   ├── internet-banking.js
+|   ├── careers.js
+|   ├── faq.js
+|   ├── resource-center.js
+|   └── resources.js         ✅ Search & filter
+│
+├── images/
+│   ├── fidelity-logo.png                ← UNCHANGED
+│   ├── hero-slide-1.jpg        🆕 ADD! ← Welcome/Banking
+│   ├── hero-slide-2.jpg        🆕 ADD! ← Business/Growth
+│   ├── hero-slide-3.jpg        🆕 ADD! ← Digital/Mobile
+│   ├── hero-slide-4.jpg        🆕 ADD! ← Trust/Heritage
+│   │
+│   ├── icons/                           ← UNCHANGED
+│   │   ├── icon-cards.svg
+│   │   ├── icon-loans.svg
+|   |   ├── icon-mobile.svg
+|   |   ├── icon-laptop.svg
+│   │   └── icon-docs.svg
+|   |
+|   ├── resource-center/
+│   |   ├── form-account.jpg
+│   |   ├── guide-mobile.jpg
+│   |   ├── policy-privacy.jpg
+│   |   ├── form-loan.jpg
+│   |   ├── guide-internet.jpg
+│   |   └── terms-service.jpg
+│   │
+│   ├── social/                          ← UNCHANGED
+│   │   ├── social-facebook.svg
+│   │   ├── social-twitter.svg
+│   │   ├── social-instagram.svg
+│   │   └── social-linkedin.svg
+│   │
+│   └── badges/                          ← UNCHANGED (PNG CBN/NDIC)
+|       ├── badge-google-play.svg   ✅
+|       ├── badge-app-store.svg     ✅
+│       ├── badge-visa.svg
+│       ├── badge-mastercard.svg
+│       ├── badge-cbn.png                ← PNG ✅
+│       └── badge-ndic.png                ← PNG ✅
+│
+└── README.md

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get the Mobile App — Fidelity Bank</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- ✅ Shared CSS (Same order as ALL your pages) -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- ✅ Page-Specific CSS -->
+    <link rel="stylesheet" href="css/get-the-app.css">
+
+    <style>
+        .nav-dropdown .dropdown-menu {
+            margin-top: 0 !important;
+            top: 100% !important;
+        }
+        
+        .header-nav-expanded>li:not(:hover)>.dropdown-menu {
+            display: none !important;
+        }
+        
+        .dropdown-menu {
+            transition: none !important;
+        }
+        /* Ensure sidebar actually SHOWS when .active */
+        
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 320px;
+            height: 100%;
+            background: #ffffff;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+            z-index: 99999;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sidebar-overlay.active {
+            transform: translateX(0);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ✅ HEADER — Loaded from components/header.html -->
+    <header id="shared-header"></header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="app-hero">
+            <h1>Get the Fidelity Mobile App</h1>
+            <p>Bank anywhere, anytime. Fast, secure, and easy to use.</p>
+        </section>
+
+        <section class="app-page-content">
+            <div class="container app-grid">
+                <div class="app-features">
+                    <h2>Your Bank in Your Pocket</h2>
+                    <ul class="feature-list">
+                        <li>Send & receive money instantly</li>
+                        <li>Pay bills & buy airtime</li>
+                        <li>Check balances & view statements</li>
+                        <li>Open new accounts in minutes</li>
+                        <li>Secure login with PIN or Biometrics</li>
+                    </ul>
+                </div>
+
+                <div class="download-section">
+                    <h3>Download the App</h3>
+                    <p>Available on Google Play Store & Apple App Store</p>
+
+                    <div class="app-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=ng.com.fidelitybank.mobile&hl=en_NG" target="_blank" rel="noopener noreferrer" class="app-button google-play">
+                            <img src="images/badges/badge-google-play.svg" alt="Get on Google Play" class="app-icon">
+                            <div class="app-button-text">
+                                <span class="app-button-label">Download on</span>
+                                <span class="app-button-store">Google Play</span>
+                            </div>
+                        </a>
+
+                        <a href="https://apps.apple.com/ng/app/fidelity-bank-mobile/id1552275641" target="_blank" rel="noopener noreferrer" class="app-button app-store">
+                            <img src="images/badges/badge-app-store.svg" alt="Download on App Store" class="app-icon">
+                            <div class="app-button-text">
+                                <span class="app-button-label">Download on</span>
+                                <span class="app-button-store">App Store</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <p class="version-note">Version 4.2.0 · Free · Requires Android 6.0+ / iOS 13.0+</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ✅ FOOTER — Loaded from components/footer.html -->
+    <footer id="shared-footer"></footer>
+
+    <!-- ✅ Scripts -->
+    <script src="js/header.js"></script>
+    <script src="js/get-the-app.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/page-load.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

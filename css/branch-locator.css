@@ -1,0 +1,252 @@
+/* ==========================================
+   BRANCH LOCATOR — Page Styles
+   Matches all service pages exactly
+========================================== */
+
+
+/* ✅ Page Load Animation */
+
+html {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+html.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.locator-page {
+    padding: 48px 24px 80px;
+    background-color: #f8faf9;
+    min-height: 100vh;
+}
+
+
+/* Page Hero */
+
+.page-hero {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #e0e8e3;
+}
+
+.page-hero h1 {
+    color: #00703c;
+    font-size: 36px;
+    margin: 0 0 12px;
+}
+
+.page-hero p {
+    color: #555;
+    font-size: 17px;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+
+/* Search & Filter Section */
+
+.search-section {
+    margin-bottom: 24px;
+}
+
+.search-box {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box input,
+.search-box select {
+    flex: 1;
+    min-width: 240px;
+    padding: 14px 20px;
+    border: 2px solid #e0e8e3;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search-box input:focus,
+.search-box select:focus {
+    border-color: #00703c;
+}
+
+.results-text {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+
+/* Branches Grid */
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+}
+
+.branch-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card.hidden {
+    display: none;
+}
+
+.branch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.branch-icon {
+    margin-bottom: 16px;
+}
+
+.branch-card h3 {
+    color: #00703c;
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.branch-address {
+    color: #555;
+    font-size: 14px;
+    margin: 0 0 16px;
+    line-height: 1.5;
+}
+
+.branch-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.branch-details li {
+    color: #444;
+    padding: 5px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.branch-details li:last-child {
+    border-bottom: none;
+}
+
+.btn-accent {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d4af37;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-accent:hover {
+    background-color: #b8962e;
+}
+
+
+/* CTA Section */
+
+.cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #00703c, #005a30);
+    padding: 48px;
+    border-radius: 12px;
+    color: #ffffff;
+}
+
+.cta-section h2 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.cta-section p {
+    color: #e6f2eb;
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary-full {
+    padding: 14px 32px;
+    background-color: #ffffff;
+    color: #00703c;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary-full:hover {
+    background-color: #f0f7f3;
+}
+
+.btn-secondary {
+    padding: 14px 32px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #00703c;
+}
+
+
+/* ✅ Responsive */
+
+@media (max-width: 900px) {
+    .branches-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .branches-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-hero h1 {
+        font-size: 28px;
+    }
+    .search-box {
+        flex-direction: column;
+    }
+    .cta-section {
+        padding: 28px 20px;
+    }
+}

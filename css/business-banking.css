@@ -1,0 +1,103 @@
+/* ==========================================
+   BUSINESS BANKING — Page Styles
+========================================== */
+
+
+/* ✅ CENTER Footer Badges — Matches ALL other pages */
+
+.footer-badges {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+    margin: 24px 0 !important;
+    width: 100% !important;
+}
+
+.footer-badges img {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+
+/* ✅ Same page load animation */
+
+html {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+html.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Page Hero */
+
+.page-hero {
+    background-color: #00703c;
+    color: #ffffff;
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    margin: 0 0 12px;
+    font-size: 32px;
+}
+
+.page-hero p {
+    margin: 0;
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* Page Content */
+
+.page-content {
+    padding: 48px 24px;
+    background-color: #f8faf9;
+}
+
+
+/* Services Grid */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.service-card h3 {
+    color: #00703c;
+    margin: 0 0 16px;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: #444;
+    margin: 0 0 24px;
+    line-height: 1.6;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open an Account — Fidelity Bank</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Shared CSS — Same order as index.html -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/open-account.css">
+    <!-- Page-specific styles -->
+</head>
+
+<body>
+
+    <!-- HEADER — Loaded from shared component -->
+    <div id="header-placeholder"></div>
+
+    <!-- ==========================================
+  PAGE HEADER
+========================================== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Open an Account</h1>
+            <p>Complete the form below to open your Fidelity Bank account. It takes just minutes.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+  MAIN FORM SECTION
+========================================== -->
+    <section class="account-section">
+        <div class="container">
+            <div class="application-card">
+                <!-- Progress Bar -->
+                <div class="progress-bar" role="navigation" aria-label="Form progress">
+                    <div class="progress-step active">
+                        <span class="step-number">1</span> Personal Details
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">2</span> Verification
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">3</span> Review & Submit
+                    </div>
+                </div>
+
+                <form id="multiStepForm" novalidate>
+                    <!-- STEP 1: Personal Details -->
+                    <div class="form-section" data-step="1">
+                        <div class="input-group">
+                            <label for="fullname">Full Name (as on ID)</label>
+                            <input type="text" id="fullname" name="fullname" required aria-required="true" placeholder="Enter your full name">
+                            <span id="fullname-error" class="error-text" role="alert">Please enter your full name</span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="yourname@email.com">
+                            <span id="email-error" class="error-text" role="alert">Enter a valid email address</span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="e.g. 08012345678">
+                            <span id="phone-error" class="error-text" role="alert">Please enter a valid phone number</span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="account-type">Preferred Account Type</label>
+                            <select id="account-type" name="accountType" required aria-required="true">
+              <option value="">— Select Account Type —</option>
+              <option value="savings">Savings Account</option>
+              <option value="current">Current Account</option>
+              <option value="savings-youth">Savings — Youth (13–29)</option>
+              <option value="domiciliary">Domiciliary Account</option>
+            </select>
+                            <span id="account-type-error" class="error-text" role="alert">Please select an account type</span>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Verification -->
+                    <div class="form-section" data-step="2" hidden>
+                        <div class="input-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required aria-required="true">
+                            <span id="dob-error" class="error-text" role="alert">Please enter your date of birth</span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="id-type">Means of Identification</label>
+                            <select id="id-type" name="idType" required aria-required="true">
+              <option value="">— Select ID Type —</option>
+              <option value="nin">National ID (NIN)</option>
+              <option value="pvc">Voter's Card</option>
+              <option value="passport">International Passport</option>
+              <option value="driver">Driver's License</option>
+            </select>
+                            <span id="id-type-error" class="error-text" role="alert">Please select an ID type</span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="id-number">ID Number</label>
+                            <input type="text" id="id-number" name="idNumber" required aria-required="true" placeholder="Enter your ID number">
+                            <span id="id-number-error" class="error-text" role="alert">Enter your ID number</span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="state">State of Residence</label>
+                            <select id="state" name="state" required aria-required="true">
+              <option value="">— Select State —</option>
+              <option value="rivers">Rivers</option>
+              <option value="lagos">Lagos</option>
+              <option value="abuja">Abuja FCT</option>
+              <option value="ph">Port Harcourt</option>
+              <option value="other">Other State</option>
+            </select>
+                            <span id="state-error" class="error-text" role="alert">Please select your state</span>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Review & Submit -->
+                    <div class="form-section" data-step="3" hidden>
+                        <h4 class="review-title">Please Review Your Application</h4>
+                        <div id="reviewSummary" class="review-box">
+                            <p class="skeleton" style="height:16px; width:80%;"></p>
+                            <p class="skeleton" style="height:16px; width:70%;"></p>
+                            <p class="skeleton" style="height:16px; width:60%;"></p>
+                            <p class="skeleton" style="height:16px; width:65%;"></p>
+                        </div>
+
+                        <label class="checkbox-label">
+            <input type="checkbox" name="agreeTerms" required>
+            <span>I agree to the <a href="#" style="color:#00703c; text-decoration:underline;">Terms of Service</a> and confirm all information provided is accurate.</span>
+          </label>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-outline" id="prevBtn" style="display:none;">← Back</button>
+                        <button type="button" class="btn btn-primary" id="nextBtn">Continue →</button>
+                        <button type="submit" class="btn btn-accent" id="submitBtn" style="display:none;">✓ Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER — Loaded from shared component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ==========================================
+  SCRIPTS — Same order as index.html
+========================================== -->
+    <script src="js/page-load.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/load-components.js"></script>
+    <script type="module" src="js/progress.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('multiStepForm');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            const reviewSummary = document.getElementById('reviewSummary');
+
+            const waitForWorkflow = setInterval(() => {
+                if (window.workflow) {
+                    clearInterval(waitForWorkflow);
+                    const wf = window.workflow;
+
+                    function updateButtons() {
+                        prevBtn.style.display = wf.currentStep > 0 ? 'inline-flex' : 'none';
+                        nextBtn.style.display = wf.currentStep < wf.totalSteps - 1 ? 'inline-flex' : 'none';
+                        submitBtn.style.display = wf.currentStep === wf.totalSteps - 1 ? 'inline-flex' : 'none';
+
+                        if (wf.currentStep === 2) {
+                            const data = Object.fromEntries(new FormData(form));
+                            const accountLabels = {
+                                'savings': 'Savings Account',
+                                'current': 'Current Account',
+                                'savings-youth': 'Youth Savings Account',
+                                'domiciliary': 'Domiciliary Account'
+                            };
+                            const idLabels = {
+                                'nin': 'National ID (NIN)',
+                                'pvc': "Voter's Card",
+                                'passport': 'International Passport',
+                                'driver': "Driver's License"
+                            };
+                            reviewSummary.innerHTML = `
+            <p><strong>Full Name:</strong> ${wf.escapeHtml(data.fullname)}</p>
+            <p><strong>Email:</strong> ${wf.escapeHtml(data.email)}</p>
+            <p><strong>Phone:</strong> ${wf.escapeHtml(data.phone)}</p>
+            <p><strong>Account Type:</strong> ${accountLabels[data.accountType] || data.accountType}</p>
+            <p><strong>Date of Birth:</strong> ${wf.escapeHtml(data.dob)}</p>
+            <p><strong>ID Type:</strong> ${idLabels[data.idType] || data.idType}</p>
+            <p><strong>State:</strong> ${wf.escapeHtml(data.state)}</p>
+          `;
+                        }
+                    }
+
+                    const origRender = wf.renderStepVisibility.bind(wf);
+                    wf.renderStepVisibility = () => {
+                        origRender();
+                        updateButtons();
+                    };
+
+                    nextBtn.addEventListener('click', () => wf.nextStep());
+                    prevBtn.addEventListener('click', () => wf.prevStep());
+
+                    form.addEventListener('submit', e => {
+                        e.preventDefault();
+                        alert('✅ Application Submitted Successfully!\n\nWe will review your details and contact you shortly.');
+                        wf.clearState();
+                        form.reset();
+                    });
+
+                    updateButtons();
+                }
+            }, 50);
+        });
+    </script>
+
+</body>
+
+</html>

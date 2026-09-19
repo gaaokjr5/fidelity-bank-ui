@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Fidelity Bank</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/faq.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="shared-header"></header>
+
+    <!-- MAIN CONTENT -->
+    <main class="faq-page">
+        <div class="container">
+            <!-- Page Hero -->
+            <section class="page-hero">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to common questions about banking with Fidelity Bank.</p>
+            </section>
+
+            <!-- Category Tabs -->
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="accounts">Accounts</button>
+                <button class="category-btn" data-category="transactions">Transfers & Payments</button>
+                <button class="category-btn" data-category="digital">Digital Banking</button>
+                <button class="category-btn" data-category="loans">Loans & Credit</button>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="faq-list">
+
+                <!-- Accounts Category -->
+                <div class="faq-item" data-category="accounts">
+                    <button class="faq-question">
+            <span>What documents do I need to open an account?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>To open a personal account, you will need:</p>
+                        <ul>
+                            <li><img src="images/icons/icon-check.svg" alt="" width="16" height="16"> Valid means of identification (National ID, Passport, or Driver’s License)</li>
+                            <li><img src="images/icons/icon-check.svg" alt="" width="16" height="16"> Proof of address (Utility bill issued within the last 3 months)</li>
+                            <li><img src="images/icons/icon-check.svg" alt="" width="16" height="16"> Passport-sized photographs</li>
+                            <li><img src="images/icons/icon-check.svg" alt="" width="16" height="16"> Completed account opening form</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="accounts">
+                    <button class="faq-question">
+            <span>Can I open an account online without visiting a branch?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>Yes. You can start the process online using our <a href="open-account.html">Account Opening Form</a>. In some cases, we may require a brief visit to your nearest branch for verification.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="accounts">
+                    <button class="faq-question">
+            <span>What is the minimum opening balance?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>Minimum opening balances vary by account type:</p>
+                        <ul>
+                            <li>Personal Savings — NGN 0 to NGN 5,000</li>
+                            <li>Current Account — NGN 10,000</li>
+                            <li>Premium Savings — NGN 50,000</li>
+                        </ul>
+                        <p>Contact your nearest branch for details on specific products.</p>
+                    </div>
+                </div>
+
+                <!-- Transactions Category -->
+                <div class="faq-item" data-category="transactions">
+                    <button class="faq-question">
+            <span>What are my daily transfer limits?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>Daily transaction limits depend on your channel and account tier:</p>
+                        <ul>
+                            <li>Mobile App — Up to NGN 5,000,000 daily</li>
+                            <li>Internet Banking — Up to NGN 10,000,000 daily</li>
+                            <li>USSD Code — Up to NGN 300,000 daily</li>
+                            <li>ATM — NGN 500,000 daily withdrawal limit</li>
+                        </ul>
+                        <p>Limits can be increased upon request at any branch.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="transactions">
+                    <button class="faq-question">
+            <span>How do I resolve a failed transaction?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>If a transaction fails or your account is debited without success, please:</p>
+                        <ul>
+                            <li>Wait 24 hours — most transactions auto-reverse</li>
+                            <li>Keep your transaction reference number</li>
+                            <li>Submit details via our <a href="complaint-feedback.html">Complaint & Feedback Form</a></li>
+                            <li>Or call our contact center for immediate assistance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="transactions">
+                    <button class="faq-question">
+            <span>How long does an inter-bank transfer take?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>Transfers to other Nigerian banks typically complete within minutes. During peak periods or system maintenance, it may take up to 24 hours. If funds do not arrive within this window, please contact us.</p>
+                    </div>
+                </div>
+
+                <!-- Digital Banking Category -->
+                <div class="faq-item" data-category="digital">
+                    <button class="faq-question">
+            <span>How do I reset my mobile app password?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>On the login screen, select <strong>Forgot Password</strong>. Follow the verification steps using your registered phone number or email. A reset link or code will be sent to you. If you encounter difficulties, visit any branch
+                            or call our contact center.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="digital">
+                    <button class="faq-question">
+            <span>Is my banking information secure?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>Yes. We use industry-standard encryption and security protocols to protect your data. However, you also play a key role:</p>
+                        <ul>
+                            <li>Never share your PIN, token code, or password with anyone</li>
+                            <li>Log out after every session</li>
+                            <li>Notify us immediately if you suspect unauthorized access</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="digital">
+                    <button class="faq-question">
+            <span>What is the Fidelity Bank USSD code?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>Dial <strong>*770#</strong> on your registered phone number to access instant banking services including transfers, airtime purchase, and balance enquiries — no internet connection required.</p>
+                    </div>
+                </div>
+
+                <!-- Loans Category -->
+                <div class="faq-item" data-category="loans">
+                    <button class="faq-question">
+            <span>How do I apply for a loan?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>You can apply through:</p>
+                        <ul>
+                            <li>Your nearest Fidelity Bank branch</li>
+                            <li>Our Mobile App — eligible customers see loan offers instantly</li>
+                            <li>Internet Banking portal</li>
+                        </ul>
+                        <p>Visit our <a href="loans-advances.html">Loans & Advances</a> page to explore available options.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="loans">
+                    <button class="faq-question">
+            <span>Do I need collateral for a loan?</span>
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+                    <div class="faq-answer">
+                        <p>Requirements depend on the product:</p>
+                        <ul>
+                            <li>Salary Advance — No collateral required</li>
+                            <li>Personal Loans — May require guarantors or salary domiciliation</li>
+                            <li>Business & Asset Finance — Collateral or security may be required</li>
+                        </ul>
+                        <p>Speak with a relationship manager to find the best option for you.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Still Need Help -->
+            <section class="faq-cta">
+                <h2>Still Have Questions?</h2>
+                <p>We are here to assist you. Reach out through any of our channels.</p>
+                <div class="faq-cta-buttons">
+                    <a href="complaint-feedback.html" class="btn-primary-full">Send a Message</a>
+                    <a href="index.html" class="btn-secondary">Return Home</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="shared-footer"></footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/page-load.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+
+<script>
+    // Load Shared Header
+    fetch('components/header.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('shared-header').innerHTML = html;
+            // Optional: trigger event for other scripts
+            window.dispatchEvent(new Event('header-loaded'));
+        })
+        .catch(err => console.log('Header load error:', err));
+
+    // Load Shared Footer
+    fetch('components/footer.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('shared-footer').innerHTML = html;
+        })
+        .catch(err => console.log('Footer load error:', err));
+</script>
+
+</html>

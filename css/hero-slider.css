@@ -1,0 +1,200 @@
+/* ==========================================
+   HERO SLIDER — 4 Slides + Smooth Transitions
+========================================== */
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Individual Slide */
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Active Slide — Visible */
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Overlay for Text Readability */
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 112, 60, 0.78) 0%, rgba(0, 112, 60, 0.55) 100%);
+    z-index: 1;
+}
+
+
+/* Slide Content */
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    max-width: 600px;
+    padding: 40px 0;
+}
+
+.slide-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    color: #ffffff;
+}
+
+.slide-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 32px;
+    color: #f0f0f0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+
+/* Navigation Arrows */
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+.slider-arrow:hover {
+    background: rgba(212, 175, 55, 0.9);
+    color: #000;
+}
+
+.prev-arrow {
+    left: 24px;
+}
+
+.next-arrow {
+    right: 24px;
+}
+
+
+/* Dot Indicators */
+
+.slider-dots {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.25s ease;
+}
+
+.dot.active {
+    background: #d4af37;
+    border-color: #d4af37;
+    transform: scale(1.2);
+}
+
+
+/* Responsive Slider */
+
+@media (max-width: 900px) {
+    .hero-slider {
+        height: 540px;
+    }
+    .slide-content h1 {
+        font-size: 32px;
+    }
+    .slide-content p {
+        font-size: 16px;
+    }
+    .slider-arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-slider {
+        height: 480px;
+    }
+    .slide-content h1 {
+        font-size: 26px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .slider-arrow {
+        display: none;
+    }
+}

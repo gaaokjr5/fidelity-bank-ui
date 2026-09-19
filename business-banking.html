@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Banking — Fidelity Bank</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+
+    <!-- ✅ Shared CSS — Paths CORRECT -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/business-banking.css">
+
+    <style>
+        /* ✅ CENTER Footer Badges — Matches ALL other pages */
+        
+        .footer-badges {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 20px !important;
+            flex-wrap: wrap !important;
+            margin: 24px 0 !important;
+            width: 100% !important;
+        }
+        
+        .footer-badges img {
+            display: inline-block !important;
+            vertical-align: middle !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER — Loaded from shared component -->
+    <header id="shared-header"></header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Business Banking</h1>
+                <p>Corporate accounts, SME financing, and tailored solutions to power your growth across Nigeria.</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Corporate Accounts</h3>
+                        <p>Comprehensive banking solutions for large organizations with dedicated relationship managers and advanced treasury services.</p>
+                        <a href="#" class="btn-accent">Learn More</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>SME Banking</h3>
+                        <p>Specialized accounts, loans, and payment solutions designed specifically for growing businesses across all sectors.</p>
+                        <a href="#" class="btn-accent">Learn More</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Public Sector</h3>
+                        <p>Reliable banking services for government agencies, parastatals, and institutions with compliance and security at the core.</p>
+                        <a href="#" class="btn-accent">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER — Loaded from shared component -->
+    <footer id="shared-footer"></footer>
+
+    <!-- ✅ Scripts -->
+    <script src="js/header.js"></script>
+    <script src="js/business-banking.js"></script>
+    <script src="js/page-load.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>

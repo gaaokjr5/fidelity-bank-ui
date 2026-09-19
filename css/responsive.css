@@ -1,0 +1,67 @@
+/* ==========================================
+   RESPONSIVE HEADER — FIX OVERFLOW ISSUE
+========================================== */
+
+
+/* Collapse to mobile menu EARLIER before it breaks */
+
+@media (max-width: 1024px) {
+    .main-nav {
+        display: none !important;
+    }
+    .mobile-menu-toggle {
+        display: block !important;
+    }
+    .header-actions .btn {
+        display: none !important;
+    }
+}
+
+
+/* Better spacing on medium screens */
+
+@media (max-width: 1150px) {
+    .site-header .container {
+        gap: 12px;
+    }
+    .nav-links {
+        gap: 16px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+
+/* Hero responsive adjustments */
+
+@media (max-width: 900px) {
+    .hero-slider {
+        height: 540px;
+    }
+    .slide-content h1 {
+        font-size: 32px;
+    }
+    .slide-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-slider {
+        height: 480px;
+    }
+    .slide-content h1 {
+        font-size: 26px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .slider-arrow {
+        display: none;
+    }
+}

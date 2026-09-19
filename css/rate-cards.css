@@ -1,0 +1,307 @@
+/* ==========================================
+   RATE CARDS — Page Styles
+   Matches all service pages exactly
+========================================== */
+
+
+/* ==========================================
+   SECTION ICONS — Replace Emojis
+========================================== */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    color: #00703c;
+    font-size: 26px;
+    margin: 0 0 32px;
+}
+
+.section-icon {
+    display: block;
+    flex-shrink: 0;
+}
+
+
+/* ✅ Page Load Animation */
+
+html {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+html.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rates-page {
+    padding: 48px 24px 80px;
+    background-color: #f8faf9;
+    min-height: 100vh;
+}
+
+
+/* Page Hero */
+
+.page-hero {
+    text-align: center;
+    margin-bottom: 56px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid #e0e8e3;
+}
+
+.page-hero h1 {
+    color: #00703c;
+    font-size: 36px;
+    margin: 0 0 12px;
+}
+
+.page-hero p {
+    color: #555;
+    font-size: 17px;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.disclaimer {
+    font-size: 13px !important;
+    color: #888 !important;
+    margin-top: 12px !important;
+    font-style: italic;
+}
+
+
+/* Sections */
+
+.rates-section {
+    margin-bottom: 64px;
+}
+
+.rates-section h2 {
+    text-align: center;
+    color: #00703c;
+    font-size: 26px;
+    margin: 0 0 32px;
+}
+
+
+/* Rate Cards Grid */
+
+.rates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.rate-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border-top: 4px solid #00703c;
+}
+
+.rate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.rate-card.featured {
+    border-top-color: #d4af37;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.15);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #d4af37;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.rate-card h3 {
+    color: #005a30;
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+.rate-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00703c;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.rate-value span {
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+}
+
+.rate-desc {
+    color: #777;
+    font-size: 13px;
+    margin: 0 0 16px;
+}
+
+.rate-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rate-details li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 13px;
+    color: #444;
+}
+
+.rate-details li:last-child {
+    border-bottom: none;
+}
+
+
+/* Fees Table */
+
+.table-wrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.fees-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fees-table th,
+.fees-table td {
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.fees-table th {
+    background: #00703c;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.fees-table tr:hover {
+    background: #f8faf9;
+}
+
+.fees-table tr:last-child td {
+    border-bottom: none;
+}
+
+.fees-table td {
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* CTA Section */
+
+.cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #00703c, #005a30);
+    padding: 48px;
+    border-radius: 12px;
+    color: #ffffff;
+}
+
+.cta-section h2 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.cta-section p {
+    color: #e6f2eb;
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary-full {
+    padding: 14px 32px;
+    background-color: #ffffff;
+    color: #00703c;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary-full:hover {
+    background-color: #f0f7f3;
+}
+
+.btn-secondary {
+    padding: 14px 32px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #00703c;
+}
+
+
+/* ✅ Responsive */
+
+@media (max-width: 1100px) {
+    .rates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .rates-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-hero h1 {
+        font-size: 28px;
+    }
+    .fees-table th,
+    .fees-table td {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+    .cta-section {
+        padding: 28px 20px;
+    }
+}

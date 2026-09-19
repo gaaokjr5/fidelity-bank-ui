@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch Locator — Fidelity Bank Nigeria</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- ✅ Shared CSS (Standard Order) -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- ✅ Page-Specific CSS -->
+    <link rel="stylesheet" href="css/branch-locator.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="shared-header"></header>
+
+    <!-- MAIN CONTENT -->
+    <main class="locator-page">
+        <div class="container">
+            <!-- Page Hero -->
+            <section class="page-hero">
+                <h1>Branch & ATM Locator</h1>
+                <p>Find Fidelity Bank branches, ATMs, and service centres near you — across Nigeria.</p>
+            </section>
+
+            <!-- Search & Filter -->
+            <section class="search-section">
+                <div class="search-box">
+                    <input type="text" id="branch-search" placeholder="Search by state, city, or branch name..." onkeyup="filterBranches()">
+                    <select id="region-filter" onchange="filterBranches()">
+            <option value="all">All Regions</option>
+            <option value="south-south">South-South</option>
+            <option value="south-east">South-East</option>
+            <option value="south-west">South-West</option>
+            <option value="north-central">North-Central</option>
+            <option value="north-east">North-East</option>
+            <option value="north-west">North-West</option>
+          </select>
+                </div>
+            </section>
+
+            <!-- Branches Grid -->
+            <section class="branches-grid" id="branches-container">
+
+                <!-- Port Harcourt — Headquarters -->
+                <div class="branch-card" data-region="south-south" data-name="port harcourt">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Port Harcourt — Headquarters</h3>
+                    <p class="branch-address">1 Aba Road, Port Harcourt, Rivers State</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Full Banking • ATM • Smart Locker</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Aba+Road+Port+Harcourt" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+
+                <!-- Benin City -->
+                <div class="branch-card" data-region="south-south" data-name="benin">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Benin City</h3>
+                    <p class="branch-address">Mission Road, Benin City, Edo State</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Full Banking • ATM</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Mission+Road+Benin+City" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+
+                <!-- Lagos — Victoria Island -->
+                <div class="branch-card" data-region="south-west" data-name="lagos victoria island">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Lagos — Victoria Island</h3>
+                    <p class="branch-address">Ajose Adeogun Street, Victoria Island, Lagos</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Corporate • Personal • Forex • ATM</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Ajose+Adeogun+Street+Victoria+Island+Lagos" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+
+                <!-- Ibadan -->
+                <div class="branch-card" data-region="south-west" data-name="ibadan">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Ibadan</h3>
+                    <p class="branch-address">Dugbe, Ibadan, Oyo State</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Full Banking • ATM</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Dugbe+Ibadan" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+
+                <!-- Enugu -->
+                <div class="branch-card" data-region="south-east" data-name="enugu">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Enugu</h3>
+                    <p class="branch-address">Independence Layout, Enugu State</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Full Banking • Agric Support • ATM</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Independence+Layout+Enugu" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+
+                <!-- Onitsha -->
+                <div class="branch-card" data-region="south-east" data-name="onitsha">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Onitsha</h3>
+                    <p class="branch-address">Main Market Road, Onitsha, Anambra State</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Commercial • Trade Support • ATM</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Main+Market+Road+Onitsha" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+
+                <!-- Abuja — Wuse 2 -->
+                <div class="branch-card" data-region="north-central" data-name="abuja">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Abuja — Wuse 2</h3>
+                    <p class="branch-address">Ademola Adetokunbo Cres, Wuse 2, Abuja FCT</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Corporate • Govt • Personal • ATM</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Ademola+Adetokunbo+Wuse+2+Abuja" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+
+                <!-- Kano -->
+                <div class="branch-card" data-region="north-west" data-name="kano">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Kano</h3>
+                    <p class="branch-address">Ahmadu Bello Way, Kano State</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Full Banking • Trade • ATM</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Ahmadu+Bello+Way+Kano" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+
+                <!-- Maiduguri -->
+                <div class="branch-card" data-region="north-east" data-name="maiduguri">
+                    <div class="branch-icon">
+                        <img src="images/icons/icon-branch.svg" alt="Branch" width="40" height="40">
+                    </div>
+                    <h3>Maiduguri</h3>
+                    <p class="branch-address">Borno Expressway, Maiduguri, Borno State</p>
+                    <ul class="branch-details">
+                        <li><strong>Hours:</strong> Mon–Fri: 8am–5pm</li>
+                        <li><strong>Services:</strong> Full Banking • ATM</li>
+                        <li><strong>Phone:</strong> +234 800 FIDELITY</li>
+                    </ul>
+                    <a href="https://google.com/maps/dir/?api=1&destination=Fidelity+Bank+Borno+Expressway+Maiduguri" target="_blank" rel="noopener noreferrer" class="btn-accent">Get Directions →</a>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h2>Need Further Assistance?</h2>
+                <p>Can't find a branch nearby? Contact our support team or reach us via our mobile app.</p>
+                <div class="cta-buttons">
+                    <a href="complaint-feedback.html" class="btn-primary-full">Contact Us</a>
+                    <a href="get-the-app.html" class="btn-secondary">Download App</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="shared-footer"></footer>
+
+    <!-- ✅ Scripts — STANDARD ORDER WITH SIDEBAR -->
+    <script src="js/header.js"></script>
+    <script src="js/page-load.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/branch-locator.js"></script>
+</body>
+
+</html>

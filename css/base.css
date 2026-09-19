@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--base-size);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: calc(var(--spacing)*3);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: calc(var(--spacing)*2);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+[role="button"],
+button,
+a {
+    transition: all var(--transition);
+}
+
+
+/* Focus accessibility */
+
+*:focus-visible {
+    outline: 3px solid var(--fidelity-gold);
+    outline-offset: 2px;
+}
+
+
+/* ==========================================
+   PAGE LOAD ANIMATION — Global for ALL Pages
+========================================== */
+
+html {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+html.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Base page container — consistent padding across all pages */
+
+.page-base {
+    padding: 48px 24px 80px;
+    background-color: #f8faf9;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   PAGE LOAD — Smooth Staggered Transitions
+   Elements fade & slide upward on load
+========================================== */
+
+
+/* Reset & Base Animation State */
+
+html {
+    opacity: 0;
+    scroll-behavior: smooth;
+    transition: opacity 0.6s ease-out;
+}
+
+
+/* Page becomes visible once fully loaded */
+
+html.page-loaded {
+    opacity: 1;
+}
+
+
+/* All sections — Hidden starting state */
+
+.site-header,
+.hero-slider,
+.actions-section,
+.resource-section,
+.site-footer {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+/* Staggered reveal classes — different delays */
+
+.site-header {
+    transition-delay: 0.05s;
+}
+
+.hero-slider {
+    transition-delay: 0.20s;
+}
+
+.actions-section {
+    transition-delay: 0.40s;
+}
+
+.resource-section {
+    transition-delay: 0.60s;
+}
+
+.site-footer {
+    transition-delay: 0.80s;
+}
+
+
+/* Active class — triggers animation */
+
+.page-loaded .site-header,
+.page-loaded .hero-slider,
+.page-loaded .actions-section,
+.page-loaded .resource-section,
+.page-loaded .site-footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Optional: Subtle hover enhancement for cards on load */
+
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-out 0.5s, transform 0.7s ease-out 0.5s;
+}
+
+.page-loaded .card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   PERFECT MATCH — Get the App = Gold Button Style
+   Same size, padding, font, everything
+========================================== */
+
+.btn-accent {
+    background-color: #d4a017 !important;
+    /* Gold background */
+    color: #000000 !important;
+    /* Dark/Black text */
+    border: none !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    letter-spacing: 0.3px !important;
+    /* ✅ EXACT SAME SIZE & PADDING */
+    padding: 14px 32px !important;
+    /* Vertical | Horizontal */
+    min-height: 48px !important;
+    min-width: 180px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+}
+
+
+/* ✅ Hover — Same darker gold */
+
+.btn-accent:hover {
+    background-color: #b8860b !important;
+    color: #000000 !important;
+}

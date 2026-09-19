@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/fidelity-bank-ui/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Fidelity Bank</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+
+    <!-- ✅ Shared CSS (Standard Order) -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- ✅ Page-Specific CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="shared-header"></header>
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-page">
+        <div class="container">
+            <!-- ✅ Welcome Banner -->
+            <section class="welcome-banner">
+                <h1>Welcome Back, <span id="userName">Customer</span>! 👋</h1>
+                <p>Here's what's happening with your accounts today.</p>
+            </section>
+
+            <!-- ✅ Account Balance Cards -->
+            <section class="accounts-section">
+                <div class="account-card primary-account">
+                    <h3>Current Account</h3>
+                    <p class="account-number">•••• 8742</p>
+                    <p class="balance-label">Available Balance</p>
+                    <p class="account-balance">₦ 1,342,750.50</p>
+                    <a href="#" class="btn-accent small-btn">View Transactions</a>
+                </div>
+
+                <div class="account-card savings-account">
+                    <h3>Savings Account</h3>
+                    <p class="account-number">•••• 2291</p>
+                    <p class="balance-label">Available Balance</p>
+                    <p class="account-balance">₦ 458,200.75</p>
+                    <a href="#" class="btn-accent small-btn">View Transactions</a>
+                </div>
+            </section>
+
+            <!-- ✅ Quick Actions -->
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="#" class="action-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#00703c" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+                        <span>Send Money</span>
+                    </a>
+                    <a href="#" class="action-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#00703c" stroke-width="2">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+                        <span>Pay Bills</span>
+                    </a>
+                    <a href="#" class="action-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#00703c" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+                        <span>Transaction History</span>
+                    </a>
+                    <a href="#" class="action-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#00703c" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+                        <span>Account Services</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="shared-footer"></footer>
+
+    <!-- ✅ Scripts (Standard Order) -->
+    <script src="js/header.js"></script>
+    <script src="js/page-load.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+/* ==========================================
+   DASHBOARD — Page Styles
+========================================== */
+
+
+/* ✅ Page Load Animation */
+
+html {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+html.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dashboard-page {
+    padding: 32px 24px 64px;
+    background-color: #f8faf9;
+    min-height: 100vh;
+}
+
+
+/* ✅ Welcome Banner */
+
+.welcome-banner {
+    background: linear-gradient(90deg, #00703c 0%, #008a48 100%);
+    color: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.welcome-banner h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.welcome-banner p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.welcome-banner span {
+    color: #ffd700;
+}
+
+
+/* ✅ Account Cards */
+
+.accounts-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.account-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #00703c;
+}
+
+.account-card h3 {
+    color: #333;
+    margin: 0 0 4px;
+    font-size: 18px;
+}
+
+.account-number {
+    color: #777;
+    font-size: 14px;
+    margin: 0 0 16px;
+}
+
+.balance-label {
+    color: #555;
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+
+.account-balance {
+    color: #00703c;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.small-btn {
+    padding: 8px 20px !important;
+    font-size: 14px !important;
+}
+
+
+/* ✅ Quick Actions */
+
+.quick-actions h2 {
+    color: #00703c;
+    margin: 0 0 24px;
+    font-size: 22px;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.action-card {
+    background: #ffffff;
+    padding: 24px 16px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.action-card svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+}
+
+.action-card span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* ✅ Responsive */
+
+@media (max-width: 900px) {
+    .accounts-section {
+        grid-template-columns: 1fr;
+    }
+    .actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .actions-grid {
+        grid-template-columns: 1fr;
+    }
+}

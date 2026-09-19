@@ -1,0 +1,229 @@
+/* ==========================================
+   LOGIN PAGE — Page-Specific Styling
+========================================== */
+
+.login-section {
+    padding: 60px 0 80px;
+    background: linear-gradient(135deg, #f0f7f3 0%, #e6f2ed 100%);
+    min-height: calc(100vh - 280px);
+    display: flex;
+    align-items: center;
+}
+
+.login-section .container {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Login Card */
+
+.login-card {
+    background: #ffffff;
+    padding: 40px 32px;
+    border-radius: 14px;
+    box-shadow: 0 6px 28px rgba(0, 112, 60, 0.12);
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00703c;
+    margin: 0 0 8px;
+}
+
+.login-header p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+
+/* Password Field with Toggle Button */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+
+/* Login Button */
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+
+/* Links Row */
+
+.login-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-links a {
+    color: #00703c;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.login-links a:hover {
+    color: #005a30;
+    text-decoration: underline;
+}
+
+.login-links span {
+    color: #ccc;
+}
+
+
+/* Divider */
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 28px 0 20px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e8e8e8;
+}
+
+.divider span {
+    padding: 0 16px;
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* Quick Login Options */
+
+.quick-login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quick-login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .login-section {
+        padding: 32px 0 48px;
+    }
+    .login-card {
+        padding: 28px 20px;
+    }
+    .login-header h1 {
+        font-size: 24px;
+    }
+    .login-links {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .login-links span {
+        display: none;
+    }
+}
+
+
+/* ==========================================
+   BUTTON ICON STYLING — Clean & Professional
+========================================== */
+
+.login-option-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    /* Space between icon & text */
+}
+
+.btn-icon {
+    width: 18px !important;
+    height: 18px !important;
+    flex-shrink: 0 !important;
+    /* Don't squish the icon */
+}
+
+
+/* ==========================================
+   FIX — Green Sign In Button with Radius
+========================================== */
+
+.btn-primary-full,
+button[type="submit"].btn-primary-full {
+    /* ✅ Force green background */
+    background-color: #00703c !important;
+    /* ✅ Force white text */
+    color: #ffffff !important;
+    /* ✅ Force rounded corners */
+    border-radius: 8px !important;
+    /* ✅ Remove default button border */
+    border: none !important;
+    /* ✅ Text styling */
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    /* ✅ Center text inside button */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    /* ✅ Button size */
+    width: 100% !important;
+    padding: 14px 20px !important;
+    /* ✅ Prevent text from breaking */
+    white-space: nowrap !important;
+    overflow: visible !important;
+    /* ✅ Ensure padding doesn't break width */
+    box-sizing: border-box !important;
+    /* ✅ Hover effect */
+    transition: background-color 0.2s ease !important;
+}
+
+.btn-primary-full:hover,
+button[type="submit"].btn-primary-full:hover {
+    background-color: #005a30 !important;
+}
